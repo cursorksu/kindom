@@ -96,5 +96,4 @@ $(function () {
     }
     $(".paralax").paroller({ factor: '0.3', type: 'foreground', direction: 'horizontal' });
 
-
 });
