@@ -22,8 +22,6 @@ $(function () {
     $('.fqa-slider').slick({
         slidesToShow: 1,
         infinite: true,
-        speed: 1200,
-        fade: true,
         pauseOnHover: true,
         pauseOnDotsHover: true,
         swipeToSlide: true,
@@ -31,6 +29,9 @@ $(function () {
             {
                 breakpoint: 768,
                 settings: {
+                    autoplaySpeed: 5000,
+                    autoplay: true,
+                    swipeToSlide: true,
                     arrows: false,
                     dots: true,
                 }
