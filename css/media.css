@@ -1,0 +1,327 @@
+@media only screen and (max-height: 700px) {
+  .pop-up-content{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .hero {
+    height: 600px;
+  }
+  .top-slider .slick-list li {
+    height: 600px;
+  }
+}
+@media only screen and (max-height: 600px) {
+  .pop-up-container{
+    margin: 50px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .pop-up-gift .pop-up-content:after{
+    z-index: -1;
+  }
+}
+@media only screen and (max-width: 1681px) {
+  .cloud {
+    width: 211px;
+    height: 180px;
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+  .pop-up .cloud-1 {
+    left: auto;
+    right: 100px;
+  }
+  .cloud-1 {
+    left: -105px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .hero .description {
+    font-size: 30px;
+  }
+  .pop-up-gift .pop-up-content:after {
+    z-index: -1;
+  }
+  .happy-slider .slick-arrow.slick-next {
+    right: 5%;
+  }
+  .happy-slider .slick-arrow.slick-prev {
+    left: 5%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .pop-up-container{
+    margin: 50px;
+
+  }
+}
+@media only screen and (max-width: 992px) {
+  .number, .hero .info-month {
+    font-size: 36px;
+    padding-bottom: 16px;
+    padding-top: 18px;
+    line-height: 1;
+  }
+  .pop-up:after {
+    width: 100px;
+    height: 100px;
+    top: 30px;
+  }
+  .title {
+    font-size: 28px;
+    line-height: 1;
+  }
+  .pop-up:before {
+    right: 20px;
+  }
+  .paralax {
+    display: none;
+  }
+  .hero {
+    height: 500px;
+  }
+  .top-slider .slick-list li {
+    height: 500px;
+  }
+  .hero .info-day {
+    font-size: 120px;
+  }
+  .info-address {
+    font-size: 18px;
+  }
+  .hero .description {
+    font-size: 22px;
+  }
+  section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .hero-info .logo {
+    width: 70px;
+    height: 70px;
+  }
+  .hs-item .img-holder {
+    height: 350px;
+  }
+  .hs-item .image {
+    margin-bottom: 20px;
+  }
+  .slick-initialized .slick-slide {
+    display: block;
+    padding: 16px 16px 0 16px;
+  }
+  .hs-descr.subtitle {
+    font-size: 30px;
+  }
+  .form__gift > div {
+    margin: 0 48px;
+  }
+  .button{
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+  footer .social-links a {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .pop-up-fqa .pop-up-content{
+    margin-left: 15px;
+    margin-right: 15px;}
+}
+
+@media only screen and (max-width: 768px) {
+  .body {
+    font-size: 14px;
+    line-height: 1; }
+  .hero {
+    height: 400px; }
+  .hero-info{
+    position: relative;
+  }
+  .hero{
+    height: auto;
+  }
+  .top-slider .slick-list li{
+    height: 300px;
+  }
+  .slick-dots{
+    bottom: 10px;
+  }
+  .hero .description{
+    bottom: 30px;
+  }
+  .benefits__list{
+    display: block;
+  }
+  .benefits__list li{
+    flex-basis: auto;
+    width: 100%;
+    margin-bottom: 36px;
+    display: flex;
+    align-items: center;
+    padding: 18px;
+  }
+  .benefits__list li img{
+    margin-right: 20px;
+    width: 100px;
+  }
+  .button, input[type="submit"]{
+    font-size: 16px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .subtitle{
+    font-size: 18px;
+  }
+  body{
+    font-size: 14px;
+  }
+  .hs-item .img-holder{
+    height: 250px;
+  }
+  .hs-descr.subtitle {
+     font-size: 20px;
+   }
+  .form-row:not(.form__gift){
+    display: block;
+  }
+  .form__check > div,
+  input[type = "tel"], input[type = "email"], input[type = "text"]{
+    width: 100%;
+    flex-basis: auto;
+  }
+  .benefits__list li:after {
+    height: 4px;
+    bottom: -20px;
+  }
+  .form__gift > div{
+    margin: 0;
+    flex-basis: 50%;
+    height: 150px;
+    padding-top: 20px;
+    text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px rgba(169,0,254,.9), 0 0 3px rgba(169,0,254,.9), 0 0 3px rgba(169,0,254,.9), 0 0 3px rgba(169,0,254,.9), 0 0 3px rgba(169,0,254,.9);
+  }
+  footer .wrapper{
+    display: block;
+  }
+  footer .wrapper .col{
+    flex-basis: auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  footer .wrapper .col:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 50%;
+    background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 47%, rgba(255,255,255,0) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 47%, rgba(255,255,255,0) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 47%, rgba(255,255,255,0) 100%);
+  }
+  .social-links{
+    padding: 0 130px;
+  }
+  .hero .info-month{
+    padding-top: 0;
+  }
+  .form__gift > div:hover label {
+    color: #fff;
+  }
+  .fqa-slider{
+    padding-top: 40px;
+    overflow: visible;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .pop-up-fqa .pop-up-content{
+    margin-top: 80px;
+    padding: 0;
+    padding-bottom: 30px;
+  }
+  .pop-up-fqa .slick-dots {
+    top: 10px;
+  }
+  .pop-up-fqa .slick-initialized .slick-slide{
+    padding: 0;
+  }
+  .pop-up-content{
+    padding: 0;
+  }
+  .hero .description{
+    width: 100%;
+    font-size: 18px;
+  }
+  .pop-up:before {
+    right: -20px;
+    z-index: -1;
+  }
+  .pop-up:after {
+    top: 10px;
+    z-index: -1;
+  }
+  .form__check > div{
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .benefits__list li img{
+    display: none;
+  }
+  .top-slider .slick-list li{
+    height: 200px;
+  }
+  .pop-up-container {
+    margin: 20px;
+  }
+  .social-links {
+    padding: 0 30px;
+  }
+  .contacts{
+    text-align: left;
+  }
+  .number {
+    font-size: 24px;
+  }
+  footer{
+    padding: 20px 0;
+  }
+  .pop-up-content {
+    margin: 10px;
+    margin-top: 80px;
+
+  }
+  .hero-wrapper{
+    flex-direction: column;
+  }
+
+  .hs-item .img-holder,
+  .hs-item .image {
+    border: none;
+    padding: 0;
+  }
+  .hs-descr.subtitle,
+  .hs-item .image{
+    margin-bottom: 8px;
+  }
+  .happy-slider .slick-dots {
+    bottom: 16px;
+  }
+  .hs-item .img-holder{
+    height: 200px;
+  }
+  .hs-item .image:before,
+  .hs-item .image:after{
+    content: none;
+  }
+}
