@@ -6,8 +6,11 @@ $(function () {
         var target = event.target;
         var li = target.closest('li');
         if (!li) return;
+        $( ".power_controls a" ).trigger( "click" );
         highlight(li);
     });
+
+
     function highlight(node) {
         if (player) {
             player.classList.remove('active');
@@ -21,6 +24,22 @@ $(function () {
         stars: 'stars',
         isActive: false
     }
+    $('.btn-close').on('click', function (e) {
+        e.target.closest('.pop-up').classList.remove('active')
+    });
+    $('.flip_effect_horizontal').on('click', function () {
+        $(this).toggleClass('flip');
+    });
+    $('.btn-star-add').on('click', function () {
+        var activeStars = Number($('.player-item.active .count-num').text());
+        activeStars = activeStars + 10;
+        $('.player-item.active .count-num').text(activeStars);
+    });
+    $('.btn-star-remove').on('click', function () {
+        var activeStars = Number($('.player-item.active .count-num').text());
+        activeStars = activeStars - 10;
+        $('.player-item.active .count-num').text(activeStars);
+    });
 
 
     // Создадим следующий объект
@@ -40,10 +59,6 @@ $(function () {
 // Получим наш сериализованный объект через API
 // Одновременно преобразуем к обычному объекту JavaScript
     var retObj = JSON.parse(localStorage.getItem("object")).stars
-    console.log(localStorage.length)
-    console.log(localStorage.key("avatar"))
-    console.log(localStorage.getItem("object", sObj))
-
 
     // Создадим следующий объект
     var masha = { "user": "Masha", "avatar": 'images/rem/avatar/2_1.png', "stars": 10, "isActive": false }
@@ -62,9 +77,9 @@ $(function () {
 // Получим наш сериализованный объект через API
 // Одновременно преобразуем к обычному объекту JavaScript
     var mashenkaM = JSON.parse(localStorage.getItem("mashenka")).stars
-    console.log(mashenkaM)
-    console.log(JSON.parse(localStorage.getItem("mashenka")).avatar)
-    console.log(localStorage.getItem("mashenka", sMasha))
+    // console.log(mashenkaM)
+    // console.log(JSON.parse(localStorage.getItem("mashenka")).avatar)
+    // console.log(localStorage.getItem("mashenka", sMasha))
 // localStorage.clear()
 // В итоге объекты obj и retObj абсолютно одинаковы
 
