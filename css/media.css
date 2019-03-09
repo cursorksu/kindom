@@ -12,7 +12,7 @@
 }
 @media only screen and (max-height: 600px) {
   .pop-up-container{
-    margin: 50px;
+    margin: 10px;
   }
 }
 @media only screen and (max-width: 1280px) {
@@ -272,6 +272,9 @@
   .form__check > div{
     margin-bottom: 30px;
   }
+  .pop-up-container {
+    margin: 10px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -281,9 +284,7 @@
   .top-slider .slick-list li{
     height: 200px;
   }
-  .pop-up-container {
-    margin: 20px;
-  }
+
   .social-links {
     padding: 0 30px;
   }
