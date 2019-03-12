@@ -12,7 +12,13 @@
         height: 1100px;
     }
     .hs-item .img-holder {
-        height: 700px;
+        height: 50px;
+    }
+    .slick-arrow.slick-next{
+        right: 60px;
+    }
+    .slick-arrow.slick-prev{
+        left: 60px;
     }
     .benefits__list li{
         padding: 50px 40px;
