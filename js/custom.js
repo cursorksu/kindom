@@ -66,6 +66,13 @@ $(function () {
             dots: true,
             responsive: [
                 {
+                    breakpoint: 5000,
+                    settings: {
+                        centerPadding: '100px',
+                        slidesToShow: 3,
+                    }
+                },
+                {
                     breakpoint: 1620,
                     settings: {
                         centerPadding: '300px'
