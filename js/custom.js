@@ -69,7 +69,7 @@ $(function () {
                     breakpoint: 5000,
                     settings: {
                         centerPadding: '100px',
-                        slidesToShow: 3,
+                        slidesToShow: 2,
                     }
                 },
                 {
