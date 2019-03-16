@@ -10,7 +10,6 @@ $(function () {
         highlight(li);
     });
 
-
     function highlight(node) {
         if (player) {
             player.classList.remove('active');
@@ -32,14 +31,51 @@ $(function () {
     });
     $('.btn-star-add').on('click', function () {
         var activeStars = Number($('.player-item.active .count-num').text());
+        var activeCount = $('.player-item.active  .count');
         activeStars = activeStars + 10;
         $('.player-item.active .count-num').text(activeStars);
+        activeCount.addClass('money');
+        var audio = $("#mySoundClip")[0];
+        audio.play();
+        setTimeout(function () {
+            activeCount.removeClass('money');
+        }, 700)
     });
     $('.btn-star-remove').on('click', function () {
         var activeStars = Number($('.player-item.active .count-num').text());
+        var activeCount = $('.player-item.active  .count');
         activeStars = activeStars - 10;
         $('.player-item.active .count-num').text(activeStars);
+        activeCount.addClass('money');
+        var audio = $("#mySoundFull")[0];
+        audio.play();
+        setTimeout(function () {
+            activeCount.removeClass('money');
+        }, 1600)
     });
+
+// adminka
+    $('.start').on('click', function() {
+        var adminka = $('.admin-panel');
+        adminka.removeClass('active');
+    });
+    $('#textWords').on('submit', function(event) {
+        var ul = document.createElement('ul');
+        ul.className = "gold";
+        document.querySelector('.pop-up-gold .pop-up-content').appendChild(ul);
+        var fieldValue = $('textarea[name = "gold"]').val();
+        $('.text-words').text(fieldValue)
+        var goldArray = fieldValue.split(' ');
+        for(var i = 0; i<goldArray.length; i++){
+            var text = goldArray[i]
+            var newLi = document.createElement('li');
+            newLi.innerHTML = text;
+            ul.appendChild(newLi);
+        }
+    });
+
+
+
 
 
     // Создадим следующий объект

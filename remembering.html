@@ -12,6 +12,28 @@
 
 <body>
 <div class="wrapper">
+    <section class="admin-panel active">
+        <div class="add-text">
+            <h3>Введіть текст золотого вірша</h3>
+            <form id ="textWords" action="#">
+                <textarea name="gold" type="text" class="text"></textarea>
+                <input type="submit" class="submit">
+            </form>
+            <h3>Введіть завдання для поля ФАНТ</h3>
+            <form id ="fant" action="#">
+                <input type="text" class="text">
+                <input type="submit" class="submit">
+            </form>
+            <h3>Введіть запитання для повторення</h3>
+            <form id ="questions" action="#">
+                <input type="text" class="text">
+                <input type="submit" class="submit">
+            </form>
+            <h3><button class="start">Почати гру</button></h3>
+        </div>
+        <div class="text-words"><h2 ></h2></div>
+
+    </section>
     <section class="players">
         <div class="control-players">
             <button class="btn btn-add"><span class="icon-plus1"></span></button>
@@ -19,6 +41,12 @@
             <button class="btn btn-star-add"><span><span class="icon-star-full"></span>10</span><span class="icon-plus1"></span></button>
             <button class="btn btn-star-remove"><span><span class="icon-star-full"></span>10</span><span class="icon-minus1"></span></button>
         </div>
+        <audio id="mySoundClip">
+            <source src="js/monety.mp3">
+        </audio>
+        <audio id="mySoundFull">
+            <source src="js/full.mp3">
+        </audio>
         <ul>
             <li class="player-item">
                 <span class="avatar"><img src="images/rem/avatar/11-6.png" alt="avatar" ></span>
@@ -50,71 +78,6 @@
                 <div class="nick">Таміла</div>
                 <div class="count"><span class="count-num">0</span> <span class = "icon-star-full"></span></div>
             </li>
-            <li class="player-item">
-                <span class="avatar"><img src="images/rem/avatar/1_1.png" alt="avatar" ></span>
-                <div class="nick">Lubava</div>
-                <div class="count"><span class="count-num">0</span> <span class = "icon-star-full"></span></div>
-            </li>
-            <li class="player-item">
-                <span class="avatar"><img src="images/rem/avatar/2-2.png" alt="avatar" ></span>
-                <div class="nick">Lubava</div>
-                <div class="count"><span class="count-num">0</span> <span class = "icon-star-full"></span></div>
-            </li>
-            <li class="player-item">
-                <span class="avatar"><img src="images/rem/avatar/2-6.png" alt="avatar" ></span>
-                <div class="nick">Lubava</div>
-                <div class="count"><span class="count-num">0</span> <span class = "icon-star-full"></span></div>
-            </li>
-            <li class="player-item">
-                <span class="avatar"><img src="images/rem/avatar/16-5.png" alt="avatar" ></span>
-                <div class="nick">Lubava</div>
-                <div class="count"><span class="count-num">0</span> <span class = "icon-star-full"></span></div>
-            </li>
-            <li class="player-item">
-                <span class="avatar"><img src="images/rem/avatar/16-5.png" alt="avatar" ></span>
-                <div class="nick">Lubava</div>
-                <div class="count"><span class="count-num">0</span> <span class = "icon-star-full"></span></div>
-            </li>
-            <li class="player-item">
-                <span class="avatar"><img src="images/rem/avatar/3-9.png" alt="avatar" ></span>
-                <div class="nick">Lubava</div>
-                <div class="count"><span class="count-num">0</span> <span class = "icon-star-full"></span></div>
-            </li>
-            <li class="player-item">
-                <span class="avatar"><img src="images/rem/avatar/1-3.png" alt="avatar" ></span>
-                <div class="nick">Lubava</div>
-                <div class="count"><span class="count-num">0</span> <span class = "icon-star-full"></span></div>
-            </li>
-            <li class="player-item">
-                <span class="avatar"><img src="images/rem/avatar/4-7.png" alt="avatar" ></span>
-                <div class="nick">Lubava</div>
-                <div class="count"><span class="count-num">0</span> <span class = "icon-star-full"></span></div>
-            </li>
-            <li class="player-item">
-                <span class="avatar"><img src="images/rem/avatar/4-5.png" alt="avatar" ></span>
-                <div class="nick">Lubava</div>
-                <div class="count"><span class="count-num">0</span> <span class = "icon-star-full"></span></div>
-            </li>
-            <li class="player-item">
-                <span class="avatar"><img src="images/rem/avatar/4-4.png" alt="avatar" ></span>
-                <div class="nick">Lubava</div>
-                <div class="count"><span class="count-num">0</span> <span class = "icon-star-full"></span></div>
-            </li>
-            <li class="player-item">
-                <span class="avatar"><img src="images/rem/avatar/5-4.png" alt="avatar" ></span>
-                <div class="nick">Lubava</div>
-                <div class="count"><span class="count-num">0</span> <span class = "icon-star-full"></span></div>
-            </li>
-            <li class="player-item">
-                <span class="avatar"><img src="images/rem/avatar/5-5.png" alt="avatar" ></span>
-                <div class="nick">Lubava</div>
-                <div class="count"><span class="count-num">0</span> <span class = "icon-star-full"></span></div>
-            </li>
-            <li class="player-item">
-                <span class="avatar"><img src="images/rem/avatar/16-7.png" alt="avatar" ></span>
-                <div class="nick">Lubava</div>
-                <div class="count"><span class="count-num">0</span> <span class = "icon-star-full"></span></div>
-            </li>
         </ul>
     </section>
     <section class="game">
@@ -127,8 +90,8 @@
                                 <li id="pw1" onClick="powerSelected(1);">Low</li>
                                 <li id="pw2" onClick="powerSelected(2);">Med</li>
                                 <li id="pw3" onClick="powerSelected(3);">High</li>
-                             </ul>
-                            <button id="spin_button"  onClick="startSpin();" >Крути<span class="icon-arrow-right1"></button>
+                            </ul>
+                            <button id="spin_button"  onClick="startSpin();" >Крути<span class="icon-arrow-right1"></span></button>
                             <a href="#" onClick="resetWheel(); return false;">Наступний учасник</a>
                         </div>
                     </td>
@@ -145,6 +108,109 @@
         </div>
     </section>
     <section class="pop-up pop-questions">
+        <div class="pop-up-container">
+            <div class="btn btn-close"></div>
+            <div class="pop-up-content">
+                <div class="flip_effect_horizontal">
+                    <div class="so-portfolio__item front">
+                        <img src="images/rem/avatar/1-3.png" alt="img">
+                    </div>
+                    <div class="so-portfolio__item back">
+                        <p>Наведи приклади, як Біблія називає Ісуса</p>
+                    </div>
+                </div>
+                <div class="flip_effect_horizontal">
+                    <div class="so-portfolio__item front">
+                        <img src="images/rem/avatar/20-9.png" alt="img">
+                    </div>
+                    <div class="so-portfolio__item back">
+                        <p>Ісус це Бог чи Людина?</p>
+                    </div>
+                </div>
+                <div class="flip_effect_horizontal">
+                    <div class="so-portfolio__item front">
+                        <img src="images/rem/avatar/14-2.png" alt="img">
+                    </div>
+                    <div class="so-portfolio__item back">
+                        <p>Яке покарання чекало на людей за створений гріх</p>
+                    </div>
+                </div>
+                <div class="flip_effect_horizontal">
+                    <div class="so-portfolio__item front">
+                        <img src="images/rem/avatar/4-4.png" alt="img">
+                    </div>
+                    <div class="so-portfolio__item back">
+                        <p>Що ти знаєш про Різдво?</p>
+                    </div>
+                </div>
+                <div class="flip_effect_horizontal">
+                    <div class="so-portfolio__item front">
+                        <img src="images/rem/avatar/4-5.png" alt="img">
+                    </div>
+                    <div class="so-portfolio__item back">
+                        <p>Який випадок трапився з Ісусом, коли він був підлітком?</p>
+                    </div>
+                </div>
+                <div class="flip_effect_horizontal">
+                    <div class="so-portfolio__item front">
+                        <img src="images/rem/avatar/11-6.png" alt="img">
+                    </div>
+                    <div class="so-portfolio__item back">
+                        <p>Що сказав голос з неба, коли Хрестився Ісус?</p>
+                    </div>
+                </div>
+                <div class="flip_effect_horizontal">
+                    <div class="so-portfolio__item front">
+                        <img src="images/rem/avatar/20-7.png" alt="img">
+                    </div>
+                    <div class="so-portfolio__item back">
+                        <p>Хто хотів вбити Ісуса, коли він був немовлям?</p>
+                    </div>
+                </div>
+                <div class="flip_effect_horizontal">
+                    <div class="so-portfolio__item front">
+                        <img src="images/rem/avatar/12-4.png" alt="img">
+                    </div>
+                    <div class="so-portfolio__item back">
+                        <p>Як Ісус ставився до діток?</p>
+                    </div>
+                </div>
+                <div class="flip_effect_horizontal">
+                    <div class="so-portfolio__item front">
+                        <img src="images/rem/avatar/20-7.png" alt="img">
+                    </div>
+                    <div class="so-portfolio__item back">
+                        <p>Скільки учнів взяв собі Ісус?</p>
+                    </div>
+                </div>
+                <div class="flip_effect_horizontal">
+                    <div class="so-portfolio__item front">
+                        <img src="images/rem/avatar/5-5.png" alt="img">
+                    </div>
+                    <div class="so-portfolio__item back">
+                        <p>Хто найбільший у Царстві Небесному?</p>
+                    </div>
+                </div>
+                <div class="flip_effect_horizontal">
+                    <div class="so-portfolio__item front">
+                        <img src="images/rem/avatar/2-2.png" alt="img">
+                    </div>
+                    <div class="so-portfolio__item back">
+                        <p>Що треба тобі, щоб ти зміг стати учнем Ісуса?</p>
+                    </div>
+                </div>
+                <div class="flip_effect_horizontal">
+                    <div class="so-portfolio__item front">
+                        <img src="images/rem/avatar/7-2.png" alt="img">
+                    </div>
+                    <div class="so-portfolio__item back">
+                        <p>Що тобі треба щоб ти міг спастися від покарання за гріх?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pop-up pop-questions-new">
         <div class="pop-up-container">
             <div class="btn btn-close"></div>
             <div class="pop-up-content">
@@ -358,106 +424,11 @@
             </div>
         </div>
     </section>
-    <section class="pop-up pop-a-z">
+    <section class="pop-up pop-up-gold active">
         <div class="pop-up-container">
             <div class="btn btn-close"></div>
             <div class="pop-up-content">
-                <div class="flip_effect_horizontal">
-                    <div class="so-portfolio__item front">
-                        <img src="images/rem/slide/sl1.jpg" alt="img">
-                    </div>
-                    <div class="so-portfolio__item back">
-                        <p>Бо</p>
-                    </div>
-                </div>
-                <div class="flip_effect_horizontal">
-                    <div class="so-portfolio__item front">
-                        <img src="images/rem/slide/sl2.jpg" alt="img">
-                    </div>
-                    <div class="so-portfolio__item back">
-                        <p>так</p>
-                    </div>
-                </div>
-                <div class="flip_effect_horizontal">
-                    <div class="so-portfolio__item front">
-                        <img src="images/rem/slide/sl3.jpg" alt="img">
-                    </div>
-                    <div class="so-portfolio__item back">
-                        <p>Полюбив</p>
-                    </div>
-                </div>
-                <div class="flip_effect_horizontal">
-                    <div class="so-portfolio__item front">
-                        <img src="images/rem/slide/sl4.jpg" alt="img">
-                    </div>
-                    <div class="so-portfolio__item back">
-                        <p>Бог</p>
-                    </div>
-                </div>
-                <div class="flip_effect_horizontal">
-                    <div class="so-portfolio__item front">
-                        <img src="images/rem/slide/sl5.jpg" alt="img">
-                    </div>
-                    <div class="so-portfolio__item back">
-                        <p>Світ,</p>
-                    </div>
-                </div>
-                <div class="flip_effect_horizontal">
-                    <div class="so-portfolio__item front">
-                        <img src="images/rem/slide/sl6.jpg" alt="img">
-                    </div>
-                    <div class="so-portfolio__item back">
-                        <p>Що віддав</p>
-                    </div>
-                </div>
-                <div class="flip_effect_horizontal">
-                    <div class="so-portfolio__item front">
-                        <img src="images/rem/slide/sl7.jpg" alt="img">
-                    </div>
-                    <div class="so-portfolio__item back">
-                        <p>Сина Свого</p>
-                    </div>
-                </div>
-                <div class="flip_effect_horizontal">
-                    <div class="so-portfolio__item front">
-                        <img src="images/rem/slide/sl8.jpg" alt="img">
-                    </div>
-                    <div class="so-portfolio__item back">
-                        <p>Однонародженого</p>
-                    </div>
-                </div>
-                <div class="flip_effect_horizontal">
-                    <div class="so-portfolio__item front">
-                        <img src="images/rem/slide/sl12.jpg" alt="img">
-                    </div>
-                    <div class="so-portfolio__item back">
-                        <p>Щоб всі хто</p>
-                    </div>
-                </div>
-                <div class="flip_effect_horizontal">
-                    <div class="so-portfolio__item front">
-                        <img src="images/rem/slide/sl10.jpg" alt="img">
-                    </div>
-                    <div class="so-portfolio__item back">
-                        <p>Вірить в Нього</p>
-                    </div>
-                </div>
-                <div class="flip_effect_horizontal">
-                    <div class="so-portfolio__item front">
-                        <img src="images/rem/slide/sl11.jpg" alt="img">
-                    </div>
-                    <div class="so-portfolio__item back">
-                        <p>Не загинув</p>
-                    </div>
-                </div>
-                <div class="flip_effect_horizontal">
-                    <div class="so-portfolio__item front">
-                        <img src="images/rem/slide/sl9.jpg" alt="img">
-                    </div>
-                    <div class="so-portfolio__item back">
-                        <p>Але мав вічне життя.</p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -472,7 +443,7 @@
     let theWheel = new Winwheel({
         'numSegments'  : 10,     // Specify number of segments.
         'outerRadius'  : 250,   // Set outer radius so wheel fits inside the background.
-        'textFontSize' : 36,    // Set font size as desired.
+        'textFontSize' : 30,    // Set font size as desired.
         'innerRadius'    : 60,
         'textFillStyle' : '#9E33B5',
         'textOrientation' : 'curved',
@@ -482,16 +453,16 @@
         // 'soundTrigger'  : 'pin',
         'segments'     :        // Define segments including colour and text.
             [
-                {'fillStyle' : 'rgba(169,0,254,0.4)','strokeStyle' : '#fd96f1',  'text' : '?'},
-                {'fillStyle' : '#fcf1c4','strokeStyle' : '#fd96f1', 'text' : '10'},
+                {'fillStyle' : 'rgba(169,0,254,0.4)','strokeStyle' : '#fd96f1',  'text' : 'ФАНТ'},
+                {'fillStyle' : '#fcf1c4','strokeStyle' : '#fd96f1', 'text' : '+10'},
                 {'fillStyle' : 'rgba(169,0,254,0.4)','strokeStyle' : '#fd96f1', 'text' : '?'},
                 {'fillStyle' : '#fcf1c4','strokeStyle' : '#fd96f1', 'text' : 'ФАНТ'},
                 {'fillStyle' : 'rgba(169,0,254,0.4)', 'strokeStyle' : '#fd96f1','text' : '?'},
-                {'fillStyle' : '#fcf1c4','strokeStyle' : '#fd96f1', 'text' : 'А - Я'},
+                {'fillStyle' : '#fcf1c4','strokeStyle' : '#fd96f1', 'text' : 'Вірш'},
                 {'fillStyle' : 'rgba(169,0,254,0.4)', 'strokeStyle' : '#fd96f1','text' : '?'},
                 {'fillStyle' : '#fcf1c4','strokeStyle' : '#fd96f1', 'text' : 'ФАНТ'},
                 {'fillStyle' : 'rgba(169,0,254,0.4)', 'strokeStyle' : '#fd96f1','text' : '?'},
-                {'fillStyle' : '#fcf1c4','strokeStyle' : '#fd96f1', 'text' : 'СТОП'},
+                {'fillStyle' : '#fcf1c4','strokeStyle' : '#fd96f1', 'text' : 'Повтор'},
             ],
         'animation' :           // Specify the animation to use.
             {
@@ -533,19 +504,13 @@
             if (powerLevel >= 1) {
                 document.getElementById('pw1').className = "pw1";
             }
-
             if (powerLevel >= 2) {
                 document.getElementById('pw2').className = "pw2";
             }
-
             if (powerLevel >= 3) {
                 document.getElementById('pw3').className = "pw3";
             }
-
-            // Set wheelPower var used when spin button is clicked.
             wheelPower = powerLevel;
-
-            // Light up the spin button by changing it's source image and adding a clickable class to it.
             document.getElementById('spin_button').src = "spin_on.png";
             document.getElementById('spin_button').className = "clickable";
         }
@@ -594,13 +559,16 @@
         document.getElementById('pw2').className = "";
         document.getElementById('pw3').className = "";
         nextPlayer();
-        wheelSpinning = false;          // Reset to false to power buttons and spin can be clicked again.
+        wheelSpinning = false;
     }
-
+    const firstPlayer = Array.from(document.querySelectorAll('.players li'))[0];
+    firstPlayer.classList.add('active')
     function nextPlayer() {
-        const players = Array.from(document.querySelectorAll('.players li'));
-        const playerActive = players.filter(item => item.classList.contains('active'));
-        console.log(players);
+        let players = Array.from(document.querySelectorAll('.players li'));
+        for(var i = 0; i < players.length; i++ ){
+            players[i].classList.remove('active');
+        }
+
     }
 
 
@@ -609,11 +577,26 @@
         if(indicatedSegment.text == '?'){
             $('.pop-questions').addClass('active');
         }
+        if(indicatedSegment.text == 'Повтор'){
+            $('.pop-questions').addClass('active');
+        }
+        if(indicatedSegment.text == '+10') {
+            var activeStars = Number($('.player-item.active .count-num').text());
+            var activeCount = $('.player-item.active  .count');
+            activeStars = activeStars + 10;
+            $('.player-item.active .count-num').text(activeStars);
+            activeCount.addClass('money');
+            var audio = $("#mySoundClip")[0];
+            audio.play();
+            setTimeout(function () {
+                activeCount.removeClass('money');
+            }, 700)
+        }
         if(indicatedSegment.text == 'ФАНТ'){
             $('.pop-fant').addClass('active');
         }
-        if(indicatedSegment.text == 'А - Я'){
-            $('.pop-a-z').addClass('active');
+        if(indicatedSegment.text == 'Вірш'){
+            $('.pop-up-gold').addClass('active');
         }
     }
 
