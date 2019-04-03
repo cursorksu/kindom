@@ -877,3 +877,8 @@ footer .wrapper .col{
 	background-size: contain;
 	background-repeat: no-repeat;
 }
+input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:-internal-autofill-previewed, textarea:-internal-autofill-selected, select:-internal-autofill-previewed, select:-internal-autofill-selected {
+    background-color: rgba(232, 240, 254, 0.2) !important;
+    background-image: none !important;
+    color: #a900fe !important;
+}
