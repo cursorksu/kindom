@@ -6,7 +6,7 @@ $(function () {
         speed: 1200,
         fade: true,
         autoplaySpeed: 3000,
-        autoplay: true,
+        // autoplay: true,
         pauseOnHover: true,
         pauseOnDotsHover: true,
         swipeToSlide: true,
@@ -18,29 +18,6 @@ $(function () {
                 }
             }
         ]
-    });
-    $('.fqa-slider').slick({
-        slidesToShow: 1,
-        infinite: true,
-        pauseOnHover: true,
-        pauseOnDotsHover: true,
-        swipeToSlide: true,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    autoplaySpeed: 5000,
-                    autoplay: true,
-                    swipeToSlide: true,
-                    arrows: false,
-                    dots: true,
-                }
-            }
-        ]
-    });
-    $('.fqa-button').on('click', function (e) {
-        e.preventDefault()
-        document.querySelector('.pop-up-fqa').classList.add('active')
     });
     $('.form input[type = "submit"]').on('click', function(e){
         e.preventDefault()
@@ -102,5 +79,13 @@ $(function () {
         });
     }
     $(".paralax").paroller({ factor: '0.3', type: 'foreground', direction: 'horizontal' });
+    //прикрепляем клик по заголовкам acc-head
+    $('#accordeon .acc-head').on('click', f_acc);
 
+    function f_acc(){
+//скрываем все кроме того, что должны открыть
+        $('#accordeon .fqa_body').not($(this).next()).slideUp(500);
+// открываем или скрываем блок под заголовком, по которому кликнули
+        $(this).next().slideToggle(500);
+    }
 });
